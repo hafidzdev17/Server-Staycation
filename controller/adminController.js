@@ -27,28 +27,19 @@ module.exports = {
     },
 
     editCategory: async (req, res) => {
-        try {
+        const {
+            id,
+            name
+        } = req.body;
 
-            const {
-                id,
-                name
-            } = req.body;
+        const category = await Category.findOne({
+            _id: id
+        });
+        console.log(category);
 
-            console.log(id);
-
-            const category = await Category.findOne({
-                _id: id
-            });
-
-            console.log(category);
-            category.name = name;
-            await category.save();
-            res.redirect('/admin/category');
-        } catch (error) {
-            console.log(error);
-
-        }
-
+        category.name = name;
+        await category.save();
+        res.redirect('/admin/category');
     },
 
 
