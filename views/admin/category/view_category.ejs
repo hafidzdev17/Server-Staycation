@@ -1,10 +1,10 @@
-<%-include('../../layouts/header.ejs')  %>
+<%-include('../../partials/header.ejs')  %>
 
 <!-- Page Wrapper -->
 <div id="wrapper">
 
 
-    <%- include('../../layouts/sidebar.ejs') %>
+    <%- include('../../partials/sidebar.ejs') %>
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -13,14 +13,14 @@
         <div id="content">
 
             <!-- Navbar -->
-            <%- include('../../layouts/navbar.ejs') %>
+            <%- include('../../partials/navbar.ejs') %>
             <!-- End of Topbar -->
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
 
                <!-- Message -->
-                <%- include('../../layouts/message.ejs')  %> 
+                <%- include('../../partials/message.ejs')  %> 
 
                 <!-- Page Heading -->
                 <h1 class="h3 mb-4 text-gray-800">View Category</h1>
@@ -35,7 +35,7 @@
         <!-- End of Main Content -->
 
 
-        <%- include('../../layouts/footer.ejs') %>
+        <%- include('../../partials/footer.ejs') %>
 
     </div>
     <!-- End of Content Wrapper -->
@@ -70,7 +70,7 @@
 
 <%- include('add_modal.ejs') %>
 <%- include('edit_modal.ejs') %>
-<%- include('../../layouts/script.ejs') %>
+<%- include('../../partials/script.ejs') %>
 
 <script>
     $('#dataTable').on('click', '.button-update', function () {
