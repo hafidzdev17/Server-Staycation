@@ -18,6 +18,8 @@
 
             <!-- Begin Page Content -->
             <div class="container-fluid">
+                  <!-- Message -->
+                  <%- include('../../layouts/message.ejs')  %> 
 
                 <!-- Page Heading -->
                 <h1 class="h3 mb-4 text-gray-800">View Bank</h1>
@@ -65,4 +67,25 @@
     </div>
 </div>
 
+<%- include('add_modal.ejs')  %> 
+<%- include('edit_modal.ejs')  %> 
 <%- include('../../layouts/script.ejs') %>
+
+
+<script>
+    $('#dataTable').on('click', '.button-update', function () {
+        let id = $(this).data('id');
+        let nameBank = $(this).data('namebank');
+        let nomorRekening = $(this).data('nomorrekening');
+        let name = $(this).data('name');
+
+        $('#edit-modal').modal('show');
+
+        $('.id').val(id);
+        $('.nameBank').val(nameBank);
+        $('.nomorRekening').val(nomorRekening);
+        $('.name').val(name);
+
+
+    });
+</script>
