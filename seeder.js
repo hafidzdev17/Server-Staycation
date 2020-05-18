@@ -2,7 +2,7 @@ var seeder = require('mongoose-seed');
 var mongoose = require('mongoose');
 
 // Connect to MongoDB via Mongoose
-seeder.connect('mongodb://127.0.0.1:27017/db_bwamern_seed', {
+seeder.connect('mongodb://127.0.0.1:27017/db_staycation', {
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify: true,
@@ -521,8 +521,7 @@ var data = [
       {
         _id: mongoose.Types.ObjectId('5e96cbe292b97300fc903345'),
         username: 'admin',
-        password: 'rahasia',
-        level: 'admin'
+        password: 'rahasia'
       },
     ]
   }

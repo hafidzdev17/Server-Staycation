@@ -1,10 +1,13 @@
 const router = require('express').Router();
 const adminController = require('../controller/adminController');
-const {
-    uploadSingle,
-    uploadMultiple
-} = require('../middleware/multer');
+const {uploadSingle,uploadMultiple} = require('../middleware/multer');
+const auth = require('../middleware/auth');
 
+router.get('/signin', adminController.viewSignIn);
+router.post('/signin', adminController.actionSignIn);
+
+router.use(auth);
+router.get('/logout', adminController.actionLogout);
 router.get('/dashboard', adminController.viewDashboard);
 
 // Route Category
@@ -39,5 +42,8 @@ router.delete('/item/:itemId/activity/:id', adminController.deleteActivity);
 
 // Route Booking 
 router.get('/booking', adminController.viewBooking);
+router.get('/booking/:id', adminController.showBooking);
+router.put('/booking/:id/confirmation', adminController.actionConfirmation);
+router.put('/booking/:id/reject', adminController.actionReject);
 
 module.exports = router;

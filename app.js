@@ -9,7 +9,7 @@ const flash = require('connect-flash');
 
 // koneksi mongoose
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/db_bwamern', {
+mongoose.connect('mongodb://127.0.0.1:27017/db_staycation', {
   useNewUrlParser: true,
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -33,7 +33,7 @@ app.use(session({
   secret: 'keyboard cat',
   resave: 'false',
   saveUninitialized: true,
-  cookie: {maxAge: 60000}
+  cookie: {maxAge:3600000}
 }));;
 app.use(flash());
 
