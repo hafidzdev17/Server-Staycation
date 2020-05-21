@@ -9,7 +9,7 @@ const flash = require('connect-flash');
 
 // koneksi mongoose
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017/db_staycation', {
+mongoose.connect('mongodb://hafidz17:bwamern@cluster0-shard-00-00-djamp.mongodb.net:27017,cluster0-shard-00-01-djamp.mongodb.net:27017,cluster0-shard-00-02-djamp.mongodb.net:27017/db_staycation?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useNewUrlParser: true,
   useUnifiedTopology: true,
