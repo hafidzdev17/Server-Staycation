@@ -30,7 +30,7 @@ router.get('/item/:id', adminController.showEditItem);
 router.put('/item/:id', uploadMultiple, adminController.editItem);
 router.delete('/item/:id/delete', adminController.deleteItem);
 
-// endpoint detail item
+// endpoint detail items
 router.get('/item/show-detail-item/:itemId', adminController.viewDetailItem);
 router.post('/item/add/feature', uploadSingle, adminController.addFeature);
 router.put('/item/update/feature', uploadSingle, adminController.editFeature);
